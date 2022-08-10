@@ -7,8 +7,8 @@ const {
 const app = express();
 
 app.use(logMiddleware);
-app.get("/", homeMiddleware);
 app.get("/users", usersMiddleware);
+app.get("/", homeMiddleware);
 
 app.listen(3000, () => {
 	console.log("Server running on port 3000");
